@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --port 6060 --devtool --progress --colors --hot --inline",
     "build": "webpack",
     "typecheck": "flow",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build && lessc src/global/supports/resources/system.less src/global/supports/resources/system.css",
+    "dev-bak": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build && lessc src/global/supports/resources/system.less src/global/supports/resources/system.css",
     "release": "webpack -p --progress --colors --config webpack.release.config.js",
     "publish": "babel -d publish/ src/ && lessc src/global/supports/resources/system.less publish/global/supports/resources/system.css"
   },
@@ -53,13 +54,14 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "antd": "^2.5.3",
+    "antd": "2.5.3",
     "draft-js": "^0.10.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "immutable": "^3.8.1",
     "js-base64": "^2.1.9",
     "lodash": "^4.17.3",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
     "synthetic-dom": "^0.2.1"
   }
 }

@@ -50,7 +50,6 @@ class Test extends React.Component {
       HtmlContent={this.state.content}
       cbReceiver={this.receiveHtml}
       uploadConfig={uploadConfig}
-      Image={false}
       Video={false}
       Audio={false}/>
   }
